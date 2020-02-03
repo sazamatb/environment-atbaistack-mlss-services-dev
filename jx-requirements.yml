@@ -4,6 +4,8 @@ autoUpdate:
 bootConfigURL: https://github.com/sazamatb/jenkins-x-boot-config
 cluster:
   clusterName: atbaistack-mlss-services
+  devEnvApprovers:
+  - sazamatb
   environmentGitOwner: sazamatb
   environmentGitPublic: true
   gitKind: github
@@ -12,17 +14,19 @@ cluster:
   namespace: jx
   project: atb-ai-stack
   provider: gke
+  registry: gcr.io
   zone: us-central1-a
 environments:
 - ingress:
-    domain: ""
+    domain: 34.69.45.161.nip.io
     externalDNS: false
-    namespaceSubDomain: ""
+    namespaceSubDomain: -jx.
     tls:
       email: ""
       enabled: false
       production: false
   key: dev
+  repository: environment-atbaistack-mlss-services-dev
 - ingress:
     domain: ""
     externalDNS: false
@@ -32,6 +36,7 @@ environments:
       enabled: false
       production: false
   key: staging
+  repository: environment-atbaistack-mlss-services-staging
 - ingress:
     domain: ""
     externalDNS: false
@@ -41,9 +46,10 @@ environments:
       enabled: false
       production: false
   key: production
+  repository: environment-atbaistack-mlss-services-production
 gitops: true
 ingress:
-  domain: ""
+  domain: 34.69.45.161.nip.io
   externalDNS: false
   namespaceSubDomain: -jx.
   tls:
@@ -59,18 +65,18 @@ storage:
     url: ""
   logs:
     enabled: true
-    url: ""
+    url: gs://atbaistack-mlss-services-logs-a952ad63-ac9a-425f-be23-d
   reports:
     enabled: true
-    url: ""
+    url: gs://atbaistack-mlss-services-reports-2eb649a3-babc-4316-b65
   repository:
     enabled: true
-    url: ""
+    url: gs://atbaistack-mlss-services-repository-7cded55e-df31-4ed1
 vault: {}
 velero:
   schedule: ""
   ttl: ""
 versionStream:
-  ref: master
+  ref: v1.0.335
   url: https://github.com/jenkins-x/jenkins-x-versions.git
 webhook: prow

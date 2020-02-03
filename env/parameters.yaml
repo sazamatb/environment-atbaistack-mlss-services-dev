@@ -1,0 +1,10 @@
+adminUser:
+  password: local:atbaistack-mlss-services/adminUser:password
+  username: atbaistack
+enableDocker: false
+pipelineUser:
+  email: sazam@atb.com
+  token: local:atbaistack-mlss-services/pipelineUser:token
+  username: sazamatb
+prow:
+  hmacToken: local:atbaistack-mlss-services/prow:hmacToken
