@@ -1,0 +1,21 @@
+apiVersion: jenkins.io/v1
+kind: SourceRepository
+metadata:
+  creationTimestamp: null
+  labels:
+    owner: sazamatb
+    provider: github
+    repository: atbaistack-python-app
+  name: sazamatb-atbaistack-python-app
+spec:
+  description: Imported application for sazamatb/atbaistack-python-app
+  httpCloneURL: https://github.com/sazamatb/atbaistack-python-app.git
+  org: sazamatb
+  provider: https://github.com
+  providerKind: github
+  providerName: github
+  repo: atbaistack-python-app
+  scheduler:
+    kind: ""
+    name: ""
+  url: https://github.com/sazamatb/atbaistack-python-app.git
