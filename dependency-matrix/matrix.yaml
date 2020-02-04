@@ -1,0 +1,7 @@
+dependencies:
+- host: github.com
+  owner: sazamatb
+  repo: atbaistack-python-app
+  url: https://github.com/sazamatb/atbaistack-python-app.git
+  version: ""
+  versionURL: ""
